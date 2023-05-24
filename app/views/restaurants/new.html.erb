@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>New Restaurant</h1>
+ <%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: %w[chinese italian japanese french belgian] %>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to restaurants_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
+
+</div>
